@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-br">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="x-ua-compatible" content="ie=edge" />
+		<title>IMDB - CodeNation Filmes</title>
+		<meta name="description" content="" />
+		<link rel="shortcut icon" type="image/png" href="/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/normalize.css" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body>
+		<header id="header">			
+			<nav id="nav">
+				<div id="nav-container">
+					<a href="" class="logo-imdb">
+						<img src="./assets/img/logo-imdb.jpg" alt="IMDB">
+					</a>
+					<ul class="menu-links">
+						<li>
+							<a href="#">LANÇAMENTOS</a>
+						</li>
+						<li>
+							<a href="#">CRÍTICA</a>
+						</li>
+						<li>
+							<a href="#">EM CARTAZ</a>
+						</li>
+					</ul>
+					<div class="logged-user">
+						<div class="user-photo">
+							<img src="./assets/img/walter-white.jpg" alt="">
+						</div>
+						<div class="user-name">Walter White</div>
+					</div>
+				</div>
+			</nav>
+			<div id="nav-carroussel">
+				<div class="nav-carroussel-container">
+					<div class="movie-title">
+						Mad Max: Estrada da Fúria
+					</div>
+					<div class="movie-categories">
+						<div>
+							AVENTURA
+						</div>
+						<div>
+							SCI-FI
+						</div>
+						<div>
+							TERROR
+						</div>
+					</div>
+					<a href="#" class="movie-button">
+						Assistir Trailer <i class="fa fa-play-circle-o"></i>
+					</a>
+					<div class="movie-info">
+						<p>Nos Cinemas</p>
+						<p>15 de Outubro de 2015 (Brasil)</p>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main id="main">
+			<div id="main-menu">
+				<div class="main-menu-container">
+					<ul class="main-menu-items">
+						<li> <a href="#">Nos Cinemas</a> </li>
+						<li> <a href="#"> Em Breve </a> </li>
+						<li> <a href="#"> Bilheteria </a> </li>
+						<li> <a href="#"> Séries </a> </li>
+						<li> <a href="#"> Trailers </a> </li>
+					</ul>
+				</div>
+			</div>
+			<div id="movies-container">
+				<ul id="movie-list">
+					
+				</ul>
+			</div>
+		</main>
+		<footer id="footer">
+			<div id="footer-container">
+				<img src="./assets/img/logo-imdb.jpg" alt="logo-imdb">
+				<ul id="footer-list">
+					<li>
+						<a href="#"><i class="fa fa-twitter"></i></a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-facebook-official"></i></a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-instagram"></i></a>
+					</li>
+				</ul>
+			</div>
+		</footer>
+	</body>
+	<script>
+		fetch("assets/data/movies.json")
+			.then(resp => resp.json())
+			.then(data => {
+				const movieList = document.getElementById("movie-list");
+
+				data.forEach(element => {
+					movieList.innerHTML += 
+					`<li>
+						<figure class="movie-poster">
+							<img src="./assets/img/poster-${element.poster}.jpg" alt="${element.name}" />
+							<div class="movie-poster-info">
+								<h3>${element.name}</h3>
+								<a href="#"><i class="fa fa-play"></i></a>
+							</div>
+						</figure>
+						<div class="movie-synopsis">
+							<h3>${element.name}</h3>
+							<p>${element.genres.split(",").map((item) => `<a href="#">${item}</a>`)}</p>
+							<p><i class="fa fa-heart"></i>${element.score != 10 ? element.score.toFixed(1) : 10}</p>
+						</div>
+					</li>`
+				});
+
+			});
+	</script>
+</html>

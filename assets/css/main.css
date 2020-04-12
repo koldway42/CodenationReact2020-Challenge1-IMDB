@@ -1,0 +1,393 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+:root {
+	--primary-color: #e4bb23;
+	--primary-hover-color: #bc9a1d;
+	--white: #fff;
+	--container-width: 960px;
+}
+
+* {
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 10px;
+}
+
+body {
+	display: grid;
+	grid-template-rows: 90vh
+						1fr
+						90px;	
+
+	grid-template-areas: 
+	"header"
+	"main"
+	"footer";
+
+	height: 100vh;
+}
+
+header#header {
+	grid-area: header;
+	background: url("../img/capa-madmax2.jpg") fixed no-repeat;
+	background-size: cover;
+	display: flex;
+	flex-flow: column;
+	justify-content: space-between;
+	width: 100%;
+	padding: 20px;
+}
+
+div#nav-container {
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	justify-content:space-between;
+	margin: 0 auto;
+	position: relative;
+	width: var(--container-width);
+}
+
+div#nav-container .logged-user {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+div#nav-container .logged-user .user-name {
+	color: var(--white);
+	font-weight: bold;
+	font-size: 1.3em;
+}
+
+div#nav-container .logged-user .user-photo img{
+	width: 45px;
+	border-radius: 365px;
+	margin-right: 15px;
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+div#nav-container .logged-user .user-photo {
+	width: auto;
+	border-radius: 360px;
+}
+
+div#nav-container .menu-links {
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+div#nav-container .menu-links li {
+	margin: 0 25px;
+}
+
+div#nav-container .menu-links li a {
+	text-decoration: none;
+	color: var(--white);
+	list-style-type: none;
+	font-weight: bold;
+	font-size: 1.3em;
+	text-transform: uppercase;
+}
+
+div#nav-container .menu-links li a:hover {
+	transition: all 0.2s ease-in-out;
+	color:	var(--primary-color);
+}
+
+div#nav-carroussel {
+	display: flex;
+	width: 100%;
+}
+
+div#nav-carroussel .nav-carroussel-container {
+	z-index: 2;
+	margin: 0 auto;
+	width: var(--container-width);
+}
+
+div#nav-carroussel .nav-carroussel-container .movie-title{
+	font-size: 6.5em;
+	line-height: 1.2em;
+	margin: 0;
+	color: var(--white);
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+div#nav-carroussel .nav-carroussel-container .movie-categories{
+	display: flex;
+	margin: 15px 0 30px;
+}
+
+div#nav-carroussel .nav-carroussel-container .movie-categories div{
+	margin-right: 15px;
+	text-transform: uppercase;
+	color: var(--white);
+	font-size: 13px;
+}
+
+div#nav-carroussel .nav-carroussel-container .movie-categories div:hover{
+	color: var(--primary-color);
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+}
+
+div#nav-carroussel .nav-carroussel-container .movie-button{
+	border-radius: 40px;
+	color: #000;
+	display: inline-block;
+	background-color: var(--primary-color);
+	padding: 15px 50px;
+	position: relative;
+	text-decoration: none;
+	font-size: 1.5em;
+}
+
+div#nav-carroussel .nav-carroussel-container .movie-button:hover{
+	background: var(--primary-hover-color);
+	transition: all 0.2s ease-in-out;
+	cursor: pointer;
+}
+
+div#nav-carroussel .nav-carroussel-container .movie-info {
+	padding: 20px 0;
+	color: #fff;
+}
+
+div#nav-carroussel .nav-carroussel-container .movie-info p {
+	font-size: 1.4em;
+}
+
+div#nav-carroussel .nav-carroussel-container .movie-info p:last-child {
+	color: var(--primary-color);
+}
+
+header#header::after {
+	background: linear-gradient( 0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 212, 255, 0) 75% );
+	content: "";
+	z-index: 1;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+main#main {
+	background-color: #f2f2f2;
+	grid-area: main;
+	z-index: 2;
+}
+
+
+main#main #main-menu{
+	width: 100%;
+	display: flex;
+}
+
+main#main #main-menu .main-menu-container {
+	z-index: 2;
+	margin: 0 auto;
+	width: var(--container-width);
+}
+
+main#main #main-menu .main-menu-items {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	list-style: none;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+main#main #main-menu .main-menu-items li {
+	margin: 0 20px;
+	padding: 25px 0;
+	border-bottom: transparent 1px solid;
+}
+
+main#main #main-menu .main-menu-items li a{
+	color: var(--primary-color);
+	text-decoration: none;
+	font-size: 1.3em;
+	transition: all 0.2s ease-in-out;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+main#main #main-menu .main-menu-items li:hover {
+	border-bottom: var(--primary-color) 1px solid;
+	transition: 0.5s;
+	cursor: pointer;
+}
+
+main#main #movies-container {
+	margin: 0 auto;
+	width: var(--container-width);
+	position: relative;
+}
+
+main#main #movies-container #movie-list {
+	padding: 20px 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 100%;
+}
+
+main#main #movies-container #movie-list li{
+	overflow: hidden;
+	width: 24%;
+	border-radius: 8px;
+	background-color: var(--white);
+	margin-bottom: 30px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+main#main #movies-container #movie-list li .movie-poster{
+	width: 100%;
+	margin: 0;
+	overflow: hidden;
+	position: relative;
+}
+
+main#main #movies-container #movie-list li .movie-poster img{
+	width: 100%;
+	height: auto;
+}
+
+main#main #movies-container #movie-list li .movie-poster .movie-poster-info{
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	z-index: 1;
+	height: 100%;
+	padding: 80px 20px;
+	left: 0;
+	top: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	opacity: 0;
+	text-align: center;
+	width: 100%;
+	visibility: hidden;
+	transition: all 0.2s ease-in-out;
+	position: absolute;
+}
+
+main#main #movies-container #movie-list li:hover .movie-poster .movie-poster-info{
+	opacity: 1;
+	visibility: visible;
+}
+
+main#main #movies-container #movie-list li .movie-poster .movie-poster-info h3{
+	color: var(--primary-color);
+	font-size: 2em;
+	line-height: 1em;
+	text-transform: uppercase;
+}
+
+main#main #movies-container #movie-list li .movie-poster .movie-poster-info i{
+	color: var(--white);
+	font-size: 5em;
+	transition: all 0.2s ease-in-out;
+}
+
+main#main #movies-container #movie-list li .movie-poster .movie-poster-info i:hover{
+	color: var(--primary-color);
+}
+
+main#main #movies-container #movie-list li .movie-synopsis {
+	padding: 10px;
+	width: 100%;
+}
+
+main#main #movies-container #movie-list li .movie-synopsis h3{
+	font-size: 1.3em;
+	font-weight: bold;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+main#main #movies-container #movie-list li .movie-synopsis p:first-of-type {
+	margin: 10px 0;
+	color: var(--primary-color);
+}
+
+main#main #movies-container #movie-list li .movie-synopsis p:first-of-type a {
+	text-decoration: none;
+	color: inherit;
+	font-size: 1.2em;
+}
+
+main#main #movies-container #movie-list li .movie-synopsis p:first-of-type a:hover {
+	text-decoration: underline;
+}
+
+main#main #movies-container #movie-list li .movie-synopsis p:last-of-type {
+	display: flex;
+	justify-content: space-between;
+	font-size: 2em;
+	font-weight: bold;
+	align-items: center;
+	margin: 0;
+}
+
+main#main #movies-container #movie-list li .movie-synopsis p:last-of-type i {
+	color: #ccc;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+}
+
+main#main #movies-container #movie-list li .movie-synopsis p:last-of-type i:hover {
+	color: #e74c3c;
+}
+
+footer#footer {
+	grid-area: footer;
+	display: flex;
+	justify-content: center;
+}
+
+footer#footer #footer-container {
+	width: var(--container-width);
+	overflow: hidden;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+footer#footer #footer-container ul {
+	list-style: none;
+	display: flex;
+	padding: 0;
+}
+
+
+footer#footer #footer-container ul li{
+	margin: 0 20px;
+}
+
+footer#footer #footer-container ul li a{
+	color: #bababa;
+	text-align: center;
+	font-size: 2.5em;
+	transition: all 0.2s ease-in-out;
+}
+
+footer#footer #footer-container ul li:nth-child(1) a:hover{
+	color: #55acee;
+}
+
+footer#footer #footer-container ul li:nth-child(2) a:hover{
+	color: #3b5998;
+}
+
+footer#footer #footer-container ul li:nth-child(3) a:hover{
+	color:#e95950;
+}

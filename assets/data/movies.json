@@ -1,0 +1,74 @@
+[
+    {
+       "name":"Alita",
+       "poster":"alita",
+       "genres": "Aventura, SCI-FI",
+       "score": 7.0
+    },
+    {
+       "name":"Batman VS Superman",
+       "poster":"batman-superman",
+       "genres": "Ação, Drama",
+       "score": 7.0
+    },
+    {
+       "name":"Bladerunner",
+       "poster":"bladerunner",
+       "genres": "Aventura, SCI-FI",
+       "score": 7.0
+    },
+    {
+       "name":"Capitã Marvel",
+       "poster":"capita-marvel",
+       "genres": "SCI-FI",
+       "score":9.0
+    },
+    {
+       "name":"Guerra Civil",
+       "poster":"civil-war",
+       "genres": "Aventura, Ação",
+       "score": 7.0
+    },
+    {
+       "name":"Coringa",
+       "poster":"coringa",
+       "genres": "Suspense, Drama",
+       "score": 10
+    },
+    {
+       "name":"Jurassic World",
+       "poster":"jurassic-world",
+       "genres": "Aventura, Terror",
+       "score": 7.0
+    },
+    {
+       "name":"Liga da Justiça",
+       "poster":"liga-justica",
+       "genres": "Aventura, Ação",
+       "score": 7.5
+    },
+    {
+       "name":"Mad Max",
+       "poster":"mad-max",
+       "genres": "Aventura, SCI-FI, Terror",
+       "score": 7.0
+    },
+    {
+       "name":"Moonlight",
+       "poster":"moonlight",
+       "genres": "Drama",
+       "score": 7.0
+    },
+    {
+       "name":"Pantera Negra",
+       "poster":"pantera-negra",
+       "genres": "Aventura, SCI-FI",
+       "score": 7.0
+    },
+    {
+       "name":"Star Wars VII",
+       "poster":"star-wars",
+       "genres": "Aventura, SCI-FI",
+       "score": 7.0
+    }
+ ]
